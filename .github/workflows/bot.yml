@@ -1,27 +1,27 @@
-name: Telegram Bot
+# name: Telegram Bot
 
-on:
-  push:
-    branches:
-      - master # Запуск при пуші в гілку main
+# on:
+#   push:
+#     branches:
+#       - master # Запуск при пуші в гілку main
 
-jobs:
-  run-bot:
-    runs-on: ubuntu-latest
+# jobs:
+#   run-bot:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: "14"
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Run bot
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        run: node bot.js
+#       - name: Run bot
+#         env:
+#           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+#         run: node bot.js
